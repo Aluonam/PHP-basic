@@ -17,7 +17,7 @@
     $texto = "Hola esto es una variable";
     echo $texto;
 
-    $altura = 164;
+    $altura = 169;
     $nombre = "Paula";
     $texto2 = "Repaso de PHP de $nombre";
     echo $texto2;
@@ -46,6 +46,38 @@
     */
     echo "<hr>";
     echo $_GET["nombre"];
+
+    #Añadir varias variables por GET 
+    #Se usa & 
+    #Si se declara que se reciben dos variables y en la url solo se pone una dará error (se soluciona añadiendo condiciones).
+
+    echo $_GET["apellido"];
+    #Ejemplo: localhost:8080/ejemplos/index.php?nombre=Federico&apellido=Garcia
+
+
+    #CONDICIONES:
+
+    if($altura>= 165){
+        echo '<h3 style="background:green"> Eres alto </h3>';
+    } else {
+        echo "<h3> Eres bajito </h3>";
+    }
+
+    #Otros operadores:
+    /*
+    + sumar
+    ‐ restar
+    * multiplicar
+    / dividir
+    % sacar el cociente
+
+    Asignación: =
+    Igualdad: ==
+    Distinto: !=
+    Negación: !
+    Y: &&
+    O: ||
+    */
 
 
 ?>
