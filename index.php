@@ -79,5 +79,48 @@
     O: ||
     */
 
+    #Funciones:
+
+    function compararNombre(){
+        if(isset($_GET["nombre"])){
+            $nombre = $_GET["nombre"];
+        } else{
+            $nombre = "texto por defecto";
+        }
+    }
+    compararNombre();
+    
+
+    #Funcion con parámetro:
+
+    function compararNombreConPar($parametro, $numero){
+        if(isset($_GET[$parametro])){
+            $valor = $_GET[$parametro];
+        } else{
+            $valor = "texto por defecto";
+            if($numero){
+                $valor= 160;
+        }
+        return  $valor;
+        
+    }}
+
+
+    #Arrays:
+
+    $personas = ["Victor", "Fran", "Paco"];
+
+    echo $personas[1];
 
 ?>
+
+<h1>
+    <ul>
+        <!-- recorre personas y por cada nombre imprime esta variable -->
+        <?php
+            foreach($personas as $nombre){
+                echo "<li>$nombre</li>";
+            }
+        ?>
+    </ul>
+</h1>
